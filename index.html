@@ -1,7 +1,93 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .flex-row > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-row > div:first-child,
+        .flex-row > div:last-child {
+            flex: 4.5;
+        }
+
+        .flex-row > div.layout {
+            flex: 1;
+        }
+
+        .flex-row img {
+            width: auto;
+            max-height: 50em;
+        }
+
+        .layout {
+            margin: 0 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<main>
+    <div class="flex-row">
+        <div><img id="image1" src="" alt="random image of dad"></div>
+        <div class="layout">
+            <button><a href="https://fb.me/1Xtnc0HVC37UyOv">Facebook</a></button>
+        </div>
+        <div><img id="image2" src="" alt="random image of dad"></div>
+    </div>
+</main>
 </body>
+<script>
+    const maxNumber = 8;
+
+    let rand = Math.floor(Math.random() * maxNumber + 1);
+    let rand1 = 0;
+    while (rand1 === rand || rand1 === 0) {
+        rand1 = Math.floor(Math.random() * maxNumber + 1);
+    }
+
+    document.getElementById('image1').src = `/images/image${rand}.jpg`;
+    document.getElementById('image2').src = `/images/image${rand1}.jpg`;
+</script>
 </html>
