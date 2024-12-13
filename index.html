@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pappa 60!!!</title>
+    <title>Arvid 60!!!</title>
     <link rel="icon" href="gift.svg" type="image/x-icon">
     <style>
         body {
@@ -55,7 +56,7 @@
             flex-direction: column;
         }
 
-        .layout h3, .layout h5 {
+        .layout h4, .layout h5 {
             margin: 0;
             padding: 0;
             text-align: center;
@@ -99,7 +100,7 @@
                 flex-direction: column !important;
             }
 
-            .layout h3, .layout h5 {
+            .layout h4, .layout h5 {
                 margin: 0 !important;
                 padding: 0 !important;
                 text-align: center !important;
@@ -121,8 +122,9 @@
     <div class="flex-row">
         <div><img id="image1" src="" alt="random image of dad"></div>
         <div class="layout">
-            <button><a class="facebook" href="">Facebook</a></button>
-            <h3 id="greeting"><a class="facebook" href="">Her kan dere legge til bilder eller hyggelige hilsninger fra feiringen</a></h3>
+            <button><a class="facebook" href="">Klikk her for å legge ut bilder eller hilsninger</a></button>
+            <br>
+            <h4 id="greeting"><a href="https://fb.me/1LpBPY6B5wdhptL">Klikk her hvis du ikke har sett denne siden før,<br>Eller om knappen ovenfor ikke fungerer</a></h4>
         </div>
         <div><img id="image2" src="" alt="random image of dad"></div>
     </div>
@@ -157,12 +159,12 @@
     document.addEventListener('DOMContentLoaded', () => {
         const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         if (isMobile) {
-            const h3Element = document.getElementById('greeting');
+            const h4Element = document.getElementById('greeting');
             const h5Element = document.createElement('h5');
-            h5Element.innerHTML = h3Element.innerHTML;
-            h5Element.className = h3Element.className;
-            h3Element.id = 'greeting';
-            h3Element.parentNode.replaceChild(h5Element, h3Element);
+            h5Element.innerHTML = h4Element.innerHTML;
+            h5Element.className = h4Element.className;
+            h4Element.id = 'greeting';
+            h4Element.parentNode.replaceChild(h5Element, h4Element);
 
         }
     });
