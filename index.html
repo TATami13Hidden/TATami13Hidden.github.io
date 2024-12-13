@@ -99,7 +99,7 @@
                 flex-direction: column;
             }
 
-            .layout h3 {
+            .layout h5 {
                 margin: 0;
                 padding: 0;
                 text-align: center;
@@ -148,9 +148,9 @@
         const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         if (isMobile) {
             const h3Element = document.getElementById('greeting');
-            const h4Element = document.createElement('h4');
-            h4Element.innerHTML = h3Element.innerHTML;
-            h3Element.parentNode.replaceChild(h4Element, h3Element);
+            const h5Element = document.createElement('h5');
+            h5Element.innerHTML = h3Element.innerHTML;
+            h3Element.parentNode.replaceChild(h5Element, h3Element);
         }
     });
 </script>
