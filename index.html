@@ -141,8 +141,10 @@
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     const isAndroid = /Android/.test(navigator.userAgent);
     if (isIOS) {
+        console.log('ios');
         facebookLink = 'fb://event/?id=' + eventId;
     } else if (isAndroid) {
+        console.log('android');
         facebookLink = 'fb://event/' + eventId;
     }
 
