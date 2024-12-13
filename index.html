@@ -121,8 +121,8 @@
     <div class="flex-row">
         <div><img id="image1" src="" alt="random image of dad"></div>
         <div class="layout">
-            <button><a href="https://fb.me/1Xtnc0HVC37UyOv">Facebook</a></button>
-            <h3>Her kan dere legge til bilder eller hyggelige hilsninger fra feiringen.</h3>
+            <button><a class="facebook" href="">Facebook</a></button>
+            <h3 class="facebook">Her kan dere legge til bilder eller hyggelige hilsninger fra feiringen.</h3>
         </div>
         <div><img id="image2" src="" alt="random image of dad"></div>
     </div>
@@ -130,6 +130,7 @@
 </body>
 <script>
     const maxNumber = 8;
+    const facebookLink = 'https://fb.me/1Xtnc0HVC37UyOv';
 
     let rand = Math.floor(Math.random() * maxNumber + 1);
     let rand1 = 0;
@@ -139,5 +140,8 @@
 
     document.getElementById('image1').src = `/images/image${rand}.jpg`;
     document.getElementById('image2').src = `/images/image${rand1}.jpg`;
+    document.querySelectorAll('.facebook').forEach((el) => {
+        el.href = facebookLink;
+    });
 </script>
 </html>
