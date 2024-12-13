@@ -145,7 +145,7 @@
         facebookLink = 'fb://event/?id=' + eventId;
     } else if (isAndroid) {
         console.log('android');
-        facebookLink = 'fb://event/' + eventId;
+        facebookLink = 'intent://www.facebook.com/events/' + eventId + '/#Intent;package=com.facebook.katana;scheme=https;end';
     }
 
     document.getElementById('image1').src = `/images/image${rand}.jpg`;
