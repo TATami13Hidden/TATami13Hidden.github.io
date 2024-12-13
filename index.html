@@ -55,7 +55,7 @@
             flex-direction: column;
         }
 
-        .layout h3 {
+        .layout h3, .layout h5 {
             margin: 0;
             padding: 0;
             text-align: center;
@@ -99,7 +99,7 @@
                 flex-direction: column;
             }
 
-            .layout h5 {
+            .layout h3, .layout h5 {
                 margin: 0;
                 padding: 0;
                 text-align: center;
@@ -150,7 +150,10 @@
             const h3Element = document.getElementById('greeting');
             const h5Element = document.createElement('h5');
             h5Element.innerHTML = h3Element.innerHTML;
+            h5Element.className = h3Element.className;
+            h3Element.id = 'greeting';
             h3Element.parentNode.replaceChild(h5Element, h3Element);
+
         }
     });
 </script>
