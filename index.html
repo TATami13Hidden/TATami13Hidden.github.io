@@ -130,12 +130,20 @@
 </body>
 <script>
     const maxNumber = 8;
-    const facebookLink = 'fb://event/469961616126642';
-//https://fb.me/1Xtnc0HVC37UyOv
+    const eventId = '469961616126642';
+    let facebookLink = 'fb://event/?id=';
     let rand = Math.floor(Math.random() * maxNumber + 1);
     let rand1 = 0;
     while (rand1 === rand || rand1 === 0) {
         rand1 = Math.floor(Math.random() * maxNumber + 1);
+    }
+
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isAndroid = /Android/.test(navigator.userAgent);
+    if (isIOS) {
+        facebookLink = 'fb://event/?id=' + eventId;
+    } else if (isAndroid) {
+        facebookLink = 'fb://event/' + eventId;
     }
 
     document.getElementById('image1').src = `/images/image${rand}.jpg`;
